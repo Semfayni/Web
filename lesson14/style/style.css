@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+}
+body{
+    background: #0f172a;
+    color: #fff;
+}
+.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.91);
+    border-bottom: 1px solid rgb(49, 58, 92);
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.logo span{
+    color: #4273ea;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 1rem;
+}
+.menu-icon{
+    font-size: 1.5rem;
+}
+.hero-section{
+    padding: 120px 0 120px 0;
+}
+.hero-content{
+    position: relative;
+}
+.hero-content h1{
+    font-size: 3.75rem;
+    line-height: 1;
+    color: #4273ea;
+    margin-bottom: 20px;
+}
+.hero-content p{
+    color: #5d6f9c;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    max-width: 650px;
+}
+.code-icon{
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #132442;
+}
+.career-section, .benefits-section, .roadmap-section{
+    padding: 40px 0;
+}
+.section-title{
+    position: sticky;
+    top: 60px;
+    z-index: 20;
+    font-size: 2rem;
+    line-height: 1.2;
+    padding: 25px 0 15px 0;
+    border-bottom: 1px solid rgb(49, 58, 92);
+    margin-bottom: 30px;
+}
+.career-card{
+    position: relative;
+    overflow: hidden;
+    min-height: 235px;
+    padding: 22px 25px;
+    background: #1d2a3d;
+    border-radius: 10px;
+    border: 1px solid #70829c;
+    transition: transform 0.3s ease, border-color 0.3s, box-shadow 0.3s ease;
+    max-width: 33%;
+}
+.career-card::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(47, 129, 246, 0.23), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.career-card:hover::before{
+    opacity: 1;
+}
+.career-card:hover::after{
+    transform: translateY(-5px);
+    border-color: #334966;
+    box-shadow: 0 10px 35px rgba(47, 129, 247, 0.25);
+}
+.career-card > *{
+    position: relative;
+    z-index: 2;
+}
+.badge{
+    display: inline-block;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin: 15px;
+}
+.badge-red{
+    background: #dc3545;
+}
+.badge-green{
+    background: #27c531;
+}
+.badge-blue{
+    background: #2160d5;
+}
+.career-card h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+.career-card p{
+    color: #d2dbe8;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+.tags span{
+    white-space: nowrap;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border: 1px solid rgb(53, 75, 113);
+    border-radius: 8px;
+    color: #50bfff;
+
+}
+.card-list{
+    display: flex;
+    gap: 20px;
+
+}
+.benefit-card{
+    max-width: 33%;
+    padding: 25px;
+    background: #141f33;
+    border: 1px solid rgb(53, 75, 113);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    row-gap: 15px;
+}
+.benefits-cards{
+    display: flex;
+    gap: 20px;
+
+}
+.benefit-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background: #141f33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+.benefit-card h3{
+    font-size: 1.2rem;
+    line-height: 1.3;
+
+}
+.benefit-card p{
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #c5cdd6;
+}
+.roadmap-list{
+    position: relative;
+
+}
+/*.roadmap-list::before{*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 50px;*/
+/*    bottom: 50px;*/
+/*    width: 2px;*/
+/*    background: #2a67d3;*/
+/*}*/
+.roadmap-card{
+    position: relative;
+    min-height: 100px;
+    padding: 25px 40px 25px 40px;
+    background: #1d2a3d;
+    border-radius: 20px;
+    border: 1px solid #334966;
+    margin-bottom: 15px;
+}
+.roadmap-circle{
+    position: absolute;
+    left: -10px;
+    top: 45px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2a67d3;
+    border: 3px solid #132442;
+}
+.roadmap-head{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.roadmap-head h3{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+.roadmap-head span{
+    color: #c5cdd6;
+    font-weight: 300;
+    font-size: 0.75rem;
+}
+.roadmap-content p{
+    color: #c5cdd6;
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+}
+footer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 50px;
+}
+.roadmap-section{
+    border-bottom: 1px solid rgb(49, 58, 92);
+}
+footer p{
+    color: #c5cdd6;
+    font-size: 0.9rem;
+}
+.chat-button{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 70px;
+    height: 70px;
+    background: #2c7efe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: scale 0.5s ease, background-color 0.3s ease;
+}
+.chat-button:hover{
+    transform: scale(1.2);
+    background: #2263dc;
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        padding: 30px 20px;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .card-list, .benefits-cards {
+        flex-wrap: wrap;
+    }
+    .career-card, .benefit-card {
+        max-width: calc(50% - 20px);
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0 60px 0;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    .code-icon {
+        display: none;
+    }
+    .section-title {
+        font-size: 1.5rem;
+        top: 55px;
+    }
+    .card-list, .benefits-cards {
+        flex-direction: column;
+    }
+    .career-card, .benefit-card {
+        max-width: 100%;
+        min-height: auto;
+    }
+    .badge {
+        margin: 0 0 15px 0;
+    }
+    .chat-button {
+        width: 60px;
+        height: 60px;
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .roadmap-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
