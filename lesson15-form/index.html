@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/normalize.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <h1>Форма прийому на роботу</h1>
+        <h4>ІТ Компанія "TechInnovate"</h4>
+        <p>Поля позначені синьою лінією є обов'язковими для заповнення</p>
+    </header>
+    <main>
+        <form class="personal">
+            <h2>Персональні дані</h2>
+            <div class="name">
+                <label class="name-label">
+                    <h3>Ім'я *</h3>
+                    <input type="text" name="name" placeholder="Введіть ваше ім'я" required>
+                </label>
+                <label class="surname">
+                    <h3>Прізвище *</h3>
+                    <input type="text" name="surname" placeholder="Введіть ваше прізвище" required>
+                </label>
+                <label class="email">
+                    <h3>Email *</h3>
+                    <input type="email" name="email" placeholder="exaple@email.com" required>
+                </label>
+                <label class="tel">
+                    <h3>Телефон *</h3>
+                    <input type="tel" name="tel" placeholder="+38 XX XXX XX XX" required>
+                </label>
+            </div>
+        </form>
+        <form class="professional">
+            <h2>Професійна інформація</h2>
+            <div class="job">
+                <label class="preferred">
+                    <h3>Бажана позиція *</h3>
+                    <select name="city" required></select>
+                </label>
+                <label class="experience">
+                    <h3>Досвід роботи (років) *</h3>
+                    <input type="number" min="0" max="50" placeholder="0-50" required>
+                </label>
+            </div>
+            <label class="tech-skills">
+                <h3>Технології та навички *</h3>
+                <input type="text" value="React, TypeScript, Node.js, Python..." name="tech-skills" required>
+            </label>
+        </form>
+        <form class="additional">
+            <h2>Додаткова інформація</h2>
+            <div class="git-port">
+                <label class="git">
+                    <h3>GitHub профіль</h3>
+                    <input type="url" name="github" placeholder="https://github.com/useername">
+                </label>
+                <label class="portfolio">
+                    <h3>Портфоліо</h3>
+                    <input type="url" name="portfolio" placeholder="https://yourportfolio.com">
+                </label>
+            </div>
+            <label class="resume">
+                <h3>Резюме (PDF, DOC) *</h3>
+                <input type="file" name="resume" placeholder="Вибрати файл Файл не вибрано" required>
+            </label>
+            <label class="about">
+                <h3>Коротко про себе *</h3>
+                <textarea name="about" rows="4" cols="" placeholder="Розкажіть про свій досвід, мотивацію та чому ви хочете приєднатися до нашої команди... (мінімум 50 символів)" required></textarea>
+            </label>
+        </form>
+        <div>
+        <label class="agreement">
+            <input type="checkbox" name="agreement" required>Я даю згоду на обробку персональних даних та підтверджую, що вся надана інформація є достовірною *
+        </label>
+        </div>
+        <button type="submit">Надіслати заявку</button>
+    </main>
+    <footer>
+        <h5>💡 Підказки по заповненню:</h5>
+        <ul>
+            <li>✓ Зелена рамка — поле заповнено правильно</li>
+            <li>✗ Червона рамка — поле заповнено неправильно</li>
+            <li>→ Синя лінія зліва — обов'язкове поле</li>
+            <li>↗ Наведіть курсор на поле для ефекту підсвічування</li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
